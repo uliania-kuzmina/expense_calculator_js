@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор расходов</title>
+    <link rel = "stylesheet" href="../калькулятор расходов/style.css">
+</head>
+<body>
+    <h1>Калькулятор расходов</h1>
+    <label>Название расхода: <input type="text" id="expenseName"></label>
+    <label>Сумма: <input type="number" id="expenseAmount"></label>
+    <label>Категория: 
+        <select id="expenseCategory" class="category">
+            <option value="Еда">Еда</option>
+            <option value="Транспорт">Транспорт</option>
+            <option value="Развлечения">Развлечения</option>
+            <option value="Другое">Другое</option>
+        </select>
+    </label>
+
+    <button onclick="addExpense()">Добавить</button>
+    <button onclick="deleteExpense()">Очистить</button>
+
+    <h2>Ваши расходы</h2>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Название</th>
+                <th>Сумма</th>
+                <th>Категория</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody id="expenseTable"></tbody>
+    </table>
+
+
+    <h3>Общая сумма: <span id="totalAmount">0</span> ₽</h3>
+
+    <script src="../калькулятор расходов/script.js"></script>
+</body>
+</html>
